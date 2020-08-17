@@ -13,7 +13,7 @@ function Events() {
   const [apiCall, triggerApiCall] = useState(false);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/events').then(res => {
+    axios.get('/events').then(res => {
       if(res && res.status === 200 && res.data) {
         setEvents(res.data);
         localStorage.setItem('events', JSON.stringify(res.data));

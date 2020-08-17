@@ -57,7 +57,7 @@ function Booking({ match }) {
     if(attendees && attendees.length > 0) {
       body.attendees = attendees;
     }
-    axios.post('http://localhost:5000/booking', body).then(data => {
+    axios.post('/booking', body).then(data => {
       if(data.status === 200 && data.data) {
         sessionStorage.setItem('success', 'true');
         setRedirect('/');
@@ -70,7 +70,7 @@ function Booking({ match }) {
 
   useState(() => {
     sessionStorage.removeItem("success");
-    axios.get(`http://localhost:5000/events/${eventID}`).then(res => {
+    axios.get(`/events/${eventID}`).then(res => {
       setEvent(res.data);
       setLoading(false);
     }).catch(err => {
