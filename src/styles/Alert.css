@@ -1,0 +1,12 @@
+.alert-container {
+  width: 95%;
+  max-width: 1080px;
+  font-size: 2rem;
+  text-align: center;
+  background: lightgreen;
+  margin: 20px auto;
+  padding: 1rem;
+}
+.alert-container.err-block {
+  background: orangered;
+}

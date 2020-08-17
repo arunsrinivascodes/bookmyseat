@@ -1,0 +1,126 @@
+.container {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding-bottom: 2.5rem;
+}
+.container .event-heading, .container .event-seats {
+  width: 100%;
+  max-width: 400px;
+  display: block;
+  margin: 10px auto;
+  text-align: center;
+  font-size: 3.2rem;
+}
+.container .event-seats {
+  margin-bottom: 20px;
+}
+.container .event-seats {
+  font-size: 2rem;
+}
+.booking-details {
+  display: flex;
+}
+.booking-details .image-block {
+  flex: 1 1 auto;
+  border: 1px solid #6495ed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .2);
+  border-radius: 5px;
+  margin: 0 50px;
+  max-height: 300px;
+}
+.booking-details .booking-form {
+  flex: 3 1 auto;
+  margin: 0 50px;
+}
+.booking-details .event-image {
+  width: 250px;
+  height: 250px;
+  padding: 5px;
+  border-radius: 50%;
+}
+.booking-form form > .form-group {
+  /* border: 1px solid green; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.booking-form .form-group label {
+  font-size: 1.5rem;
+  flex: 1 1 auto;
+  max-width: 300px;
+  width: 100%;
+  font-weight: bold;
+}
+.booking-form .input-group {
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-start; */
+}
+.booking-form .input-group .error-message {
+  color: #ff0000;
+  font-size: 1.2rem;
+}
+.booking-form .form-group input, .booking-form .form-group select {
+  /* max-width: 300px; */
+  width: 200px;
+  min-width: 200px;
+  /* flex: 4 1 300px; */
+  height: 50px;
+  /* justify-self: flex-start; */
+  padding: 5px;
+  border: 2px solid #000;
+  border-radius: 4px;
+}
+.book-tickets-cta, .cancel-booking-cta {
+  padding: 8px 12px;
+  cursor: pointer;
+  background-color: #fb641b;
+  outline: none;
+  border: none;
+  color: #fff;
+  padding: 18px 25px;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,.2);
+  font-size: 1.7rem;
+  letter-spacing: 0.8px;
+}
+.book-tickets-cta {
+  margin-right: 2rem;
+  background-color: #2e8b57;
+}
+.book-tickets-cta.disabled-cta {
+  background-color: red;
+  cursor: no-drop;
+  opacity: 0.6;
+}
+.book-tickets-cta:hover, .cancel-booking-cta:hover {
+  opacity: 0.9;
+  text-decoration: underline;
+}
+.cancel-booking-cta a {
+  text-decoration: none;
+  color: #fff;
+}
+.booking-btn-group {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+@media screen and (max-width: 800px) {
+  .booking-details {
+    flex-direction: column;
+  }
+  .booking-details .image-block {
+    width: 90%;
+    margin: auto;
+    margin: 20px auto;
+  }
+  .booking-details .event-image {
+    padding: 15px;
+  }
+}

@@ -1,0 +1,97 @@
+.container {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+	padding-bottom: 2.5rem;
+}
+.events {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.event {
+  margin: 10px;
+  padding: 8px;
+  border: 1px solid #ddd;
+  width: calc((100% - 80px) / 4);
+}
+.event h3 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+.event-block {
+  display: flex;
+}
+.event-block img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  padding: 5px;
+}
+.event-details {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+.event-details .event-date {
+  font-weight: bold;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+.event-details .seats {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.event-details .seats.available-high {
+  color: green;
+}
+.event-details .seats.available-medium {
+  color: orange;
+}
+.event-details .seats.unavailable {
+  color: red;
+}
+.event-details .event-cta {
+  margin-top: auto;
+  /* margin-bottom: 0; */
+  justify-self: flex-end;
+  padding: 8px;
+}
+.cursorPointer {
+  cursor: pointer;
+}
+.event-cta a {
+  text-decoration: none;
+  color: #000;
+}
+.event-cta:hover > a {
+  text-decoration: underline;
+  /* color: coral; */
+  opacity: 0.9;
+}
+@media screen and (max-width: 1000px) {
+  .event {
+    width: calc((100% - 80px) / 3);
+  }
+}
+@media screen and (max-width: 768px) {
+  .event {
+    width: calc((100% - 80px) / 2);
+  }
+}
+@media screen and (max-width: 600px) {
+  .event {
+    width: 90vw;
+  }
+  .event-block img {
+    flex: 1 1 auto;
+  }
+  .event-details {
+    flex: 3 1 auto;
+    align-items: center;
+  }
+  .event-details .seats {
+    font-size: 1.5rem;
+  }
+}
