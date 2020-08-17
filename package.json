@@ -19,7 +19,7 @@
     "start": "node backend/index.js",
     "build": "react-scripts build",
     "server": "node server/index.js",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install npm && run build",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install && npm run build",
     "live-server": "nodemon server/index.js"
   },
   "proxy": "http://localhost:5000",
