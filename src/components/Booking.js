@@ -70,6 +70,7 @@ function Booking({ match }) {
 
   useState(() => {
     sessionStorage.removeItem("success");
+    document.title = "Book Your Seats";
     axios.get(`/events/${eventID}`).then(res => {
       setEvent(res.data);
       setLoading(false);
