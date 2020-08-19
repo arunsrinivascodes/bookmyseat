@@ -12,3 +12,8 @@ input {
   color: #000056;
   font-size: 1.5rem;
 }
+@media screen and (max-width: 600px) {
+  .search-input {
+    width: 90%;
+  }
+}

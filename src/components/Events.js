@@ -27,10 +27,7 @@ function Events() {
 
   useEffect(() => {
     setLoading(true);
-    console.log(state, state.searchText, "events file");
-    console.log(events);
     const allEvents = JSON.parse(localStorage.getItem('events')) || [];
-    console.log(allEvents);
     if(state.searchText) {
       const filteredEvents = allEvents.filter(event => {
         return event.name.toLowerCase().includes(state.searchText.toLowerCase());
