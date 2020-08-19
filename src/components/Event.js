@@ -20,7 +20,7 @@ function Event({ data }) {
       <h3 tabIndex="0" aria-label={name} role="heading">{name}</h3>
       <section className="event-block">
         <img src={eventImage} alt={name} />
-        <section className="event-details" role="button">
+        <section className="event-details">
           <div 
             tabIndex="0" 
             className="event-date" 
@@ -29,7 +29,7 @@ function Event({ data }) {
           </div>
           <div 
             tabIndex="0"
-            aria-label={availableSeatCount === 0 ? "Sorry, no seats available" : `${availableSeatCount} seats available to book`}
+            aria-label={`${availableSeatCount} seats available`}
             className={availableSeatCount > 50 ? "seats available-high" : (availableSeatCount > 0 ? "seats available-medium" : "seats unavailable")}>
               Seats Available: <span className="seats-count">{availableSeatCount}</span>
           </div>
