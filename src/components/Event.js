@@ -34,7 +34,7 @@ function Event({ data }) {
               Seats Available: <span className="seats-count">{availableSeatCount}</span>
           </div>
           <button 
-            aria-hidden={availableSeatCount === 0}
+            aria-label={availableSeatCount === 0 ? "Sold Out" : "Book Now"}
             className={availableSeatCount === 0 ? "event-cta" : "event-cta cursorPointer"} 
             disabled={availableSeatCount === 0}>
               {availableSeatCount > 0 ? (<Link to={`/booking/${_id}`} tabIndex="-1">
