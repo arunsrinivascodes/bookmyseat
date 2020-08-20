@@ -34,8 +34,6 @@ router.get('/:eventID', async (req, res) => {
 router.post('/', [
     body('name')
       .notEmpty()
-      .isAlpha()
-      .withMessage('Must be only alphabetical characters')
       .isLength({ min: 2 })
       .withMessage('Must be minimum of 2 characters'),
     body('eventImage')

@@ -28,13 +28,13 @@ function Events() {
   useEffect(() => {
     setLoading(true);
     const allEvents = JSON.parse(localStorage.getItem('events')) || [];
-    if(state.searchText) {
+    if(state.searchText !== "") {
       const filteredEvents = allEvents.filter(event => {
         return event.name.toLowerCase().includes(state.searchText.toLowerCase());
       });
       setEvents(filteredEvents);
       setLoading(false);
-    } else {
+    } else if(state.searchText === "") {
       if(localStorage.getItem('events')) {
         setEvents(allEvents);
         setLoading(false);
